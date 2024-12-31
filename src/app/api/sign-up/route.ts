@@ -19,7 +19,7 @@ export const POST = async (req: NextRequest) => {
 
 		// if inserted successfully, redirect to the dashboard (insert the password by bycrpting it)
 
-		const isInserted = true;
+		const isInserted = email && password ? true : false;
 
 		if (isInserted) {
 			const cookieStore = await cookies();
